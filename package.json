@@ -1,0 +1,15 @@
+{
+  "name": "visual-thinking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "YoelVann",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^28.0.3"
+  }
+}
