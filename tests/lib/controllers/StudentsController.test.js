@@ -15,4 +15,22 @@ describe("Tests in StudentsController class", () => {
         
         expect(verifyAllStudentsReturned).toBeTruthy();
     });
+
+    test("2. static method getAllStudentsWithCertEmails() must return all students email if the student have certification", () => {
+       
+        const studentsJson = Reader.readJsonFile("students.json");
+        const studentsEmails = StudentsController.getAllStudentsWithCertEmails();
+
+        let studentsCertsEmails = [];
+
+        studentsJson.forEach(student => {
+           if(student.haveCertification === true){
+            studentsCertsEmails.push(student.email);
+           }
+        });
+
+        const allStudentWithCertEmailContained = studentsEmails.every(email => studentsCertsEmails.includes(email));
+
+        expect(allStudentWithCertEmailContained).toBeTruthy();
+    });
 });
