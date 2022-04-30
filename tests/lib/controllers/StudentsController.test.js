@@ -33,4 +33,13 @@ describe("Tests in StudentsController class", () => {
 
         expect(allStudentWithCertEmailContained).toBeTruthy();
     });
+
+    test("3. static method getStudentsWithCreditsHigherThan() must return all students if the student have credits higer than 500", () => {
+
+        const studentsJson = Reader.readJsonFile("students.json");
+        const studentsWithCredisHigher = StudentsController.getStudentsWithCreditsHigherThan();
+        const studentsCredistHigherTest = studentsWithCredisHigher.every(student => student.credits > 500);
+
+        expect(studentsCredistHigherTest).toBeTruthy();
+    });
 });
