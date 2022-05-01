@@ -11,7 +11,7 @@ describe("Tests in StudentsController class", () => {
         const studentsReturned = StudentsController.getAllStudents();
         const studentsReturnedId = studentsReturned.map(student => student.id);
 
-        const verifyAllStudentsReturned = studentsReturnedId.every(studentId => studentsJsonId.includes(studentId))
+        const verifyAllStudentsReturned = studentsReturnedId.every(studentId => studentsJsonId.includes(studentId));
         
         expect(verifyAllStudentsReturned).toBeTruthy();
     });
@@ -24,9 +24,9 @@ describe("Tests in StudentsController class", () => {
         let studentsCertsEmails = [];
 
         studentsJson.forEach(student => {
-           if(student.haveCertification === true){
-            studentsCertsEmails.push(student.email);
-           }
+            if(student.haveCertification === true){
+                studentsCertsEmails.push(student.email);
+            }
         });
 
         const allStudentWithCertEmailContained = studentsEmails.every(email => studentsCertsEmails.includes(email));
