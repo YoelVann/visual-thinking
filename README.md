@@ -65,7 +65,7 @@ Reader --> StudentsService --> StudentsController --> Server;
 
 
 ### Usage
-Fisrt, install the node modules
+First, install the node modules
 
 ```bash
 npm install
