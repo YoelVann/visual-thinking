@@ -37,6 +37,8 @@ All the students data have the following structure. Example of student object:
 
 The following diagram is a general overview of the design followed to create the project, original art by @carlogilmar.
 
+![image](https://user-images.githubusercontent.com/17634377/165870375-fe5a730a-eada-4abe-ac9c-42334e003b18.png)
+
 The project have four principal parts:
 
     1. JSON Reader class, a class that reads any json file
@@ -50,7 +52,7 @@ The data flow is following the next diagram
 
 ```mermaid
 graph TD;
-Reader -> StudentsService -> StudentsController -> Server;
+Reader --> StudentsService --> StudentsController --> Server;
 ```
 
 ### API endpoints
@@ -61,7 +63,6 @@ Reader -> StudentsService -> StudentsController -> Server;
 | `localhost:3000/v1/students/emails` | `localhost:3000/v1/students/emails`| Return all students emails with certification  |
 | `localhost:3000/v1/students/credits` | `localhost:3000/v1/students/credits`| Return all students with credits higher than 500 |
 
-![image](https://user-images.githubusercontent.com/17634377/165870375-fe5a730a-eada-4abe-ac9c-42334e003b18.png)
 
 ### Usage
 Fisrt, install the node modules
